@@ -109,17 +109,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    @IBAction func StitchTapped(_ sender: UIButton) {
+    fileprivate func stitchPhotos() {
         if stitchedImage == nil{
             stitchedImage = newImageBox.image
             titleLabel.title = "Base image added"
             
         }else if(photosArray.count < 2){
             titleLabel.title = "Take next photo"
-        
+            
         }
         else{
-          // let newStitchedImage = OpenCVWrapper.stitchPhotos(stitchedImage!, photo2: newImageBox.image!, panoramicWarp: isPanoramic)
+            // let newStitchedImage = OpenCVWrapper.stitchPhotos(stitchedImage!, photo2: newImageBox.image!, panoramicWarp: isPanoramic)
             let newStitchedImage = OpenCVWrapper.stitchPhotos(photosArray as! [Any], panoramicWarp: isPanoramic)
             if newStitchedImage == nil{
                 titleLabel.title = "Couldn't stitch photos"
@@ -131,6 +131,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 titleLabel.title = "Images stiched"
             }
         }
+    }
+    
+    @IBAction func StitchTapped(_ sender: UIButton) {
+        stitchPhotos()
     }
     
     @IBAction func panoramicSwitch(_ sender: UISwitch) {
@@ -147,6 +151,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 stitchedImage = image
                 titleLabel.title = "Take next photo"
             }
+            stitchPhotos()
             imagePicker.dismiss(animated: true, completion: nil)
 //            guard let ciImage = CIImage(image: image) else {
 //                fatalError("couldn't convert uiimage to CIImage")

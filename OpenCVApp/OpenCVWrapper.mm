@@ -47,10 +47,13 @@ return [NSString stringWithFormat:@"OpenCV Version %s",  CV_VERSION];
     cv::Ptr<Stitcher> pStitcher = nullptr;
     if (isPanoramic){
         pStitcher= Stitcher::create(Stitcher::PANORAMA);
+        pStitcher->setPanoConfidenceThresh(0.5);
+
         cout<<"Panoramic"<<endl;
     }
     else{
         pStitcher= Stitcher::create(Stitcher::SCANS);
+        pStitcher->setPanoConfidenceThresh(0.5);
         cout<<"Scans"<<endl;
 
     }
