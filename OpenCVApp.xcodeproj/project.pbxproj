@@ -21,7 +21,6 @@
 		66AC5E5F28F88EEA000648D0 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66AC5E5E28F88EEA000648D0 /* OpenCVWrapper.mm */; };
 		66AC5E6228F890A9000648D0 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66AC5E6128F890A9000648D0 /* opencv2.framework */; };
 		66AC5E6828F9E213000648D0 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AC5E6728F9E213000648D0 /* UIImage+Rotate.m */; };
-		66AC5E6B28FA11F7000648D0 /* yolov7-tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 66AC5E6A28FA11F7000648D0 /* yolov7-tiny.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		66AC5E6128F890A9000648D0 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		66AC5E6728F9E213000648D0 /* UIImage+Rotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		66AC5E6928F9E232000648D0 /* UIImage+Rotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
-		66AC5E6A28FA11F7000648D0 /* yolov7-tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "yolov7-tiny.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 				66AC5E5D28F88EEA000648D0 /* OpenCVWrapper.h */,
 				66AC5E5E28F88EEA000648D0 /* OpenCVWrapper.mm */,
 				66AC5E6028F88F5C000648D0 /* PrefixHeader.pch */,
-				66AC5E6A28FA11F7000648D0 /* yolov7-tiny.mlmodel */,
 				66AC5E5C28F88EE9000648D0 /* OpenCVApp-Bridging-Header.h */,
 				66AC5E6728F9E213000648D0 /* UIImage+Rotate.m */,
 				66AC5E6928F9E232000648D0 /* UIImage+Rotate.h */,
@@ -190,7 +187,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AC5E6B28FA11F7000648D0 /* yolov7-tiny.mlmodel in Sources */,
 				66AC5E4028F886E7000648D0 /* ViewController.swift in Sources */,
 				66AC5E3C28F886E7000648D0 /* AppDelegate.swift in Sources */,
 				66AC5E5F28F88EEA000648D0 /* OpenCVWrapper.mm in Sources */,
